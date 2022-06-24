@@ -23,7 +23,7 @@ class Firm(models.Model):
     full_name = models.CharField(max_length=100, default='', verbose_name='Полное наименование')
     tag = models.ManyToManyField(Tag, blank=True, verbose_name='Теги')
     path = models.CharField(max_length=40, blank=True, verbose_name='Вебсайт')
-    img = models.ImageField(blank=True, upload_to='img/firm')
+    img = models.ImageField(blank=True, upload_to='img/firm', verbose_name='Логотип')
     img_width = models.IntegerField(default=0, editable=False)
     img_height = models.IntegerField(default=0, editable=False)
 
